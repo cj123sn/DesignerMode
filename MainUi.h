@@ -17,6 +17,10 @@ public:
 
 private:
     Ui::MainUi *ui;
+
+
+private:
+    void ObserverMode();
 };
 
 #endif // MAINUI_H

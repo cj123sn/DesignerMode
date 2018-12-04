@@ -23,7 +23,11 @@ SOURCES += main.cpp\
     AbstractFactory/JProduct.cpp \
     AbstractFactory/ConcreteProduct.cpp \
     AbstractFactory/AbstractFactory.cpp \
-    AbstractFactory/ConcreteFactory.cpp
+    AbstractFactory/ConcreteFactory.cpp \
+    ObserverMode/AbstractObserver.cpp \
+    ObserverMode/ConcreteObserver.cpp \
+    ObserverMode/AbstractSubject.cpp \
+    ObserverMode/ConcreteSubject.cpp
 
 HEADERS  += MainUi.h \
     AdapterMode/RussiaSocker.h \
@@ -33,6 +37,10 @@ HEADERS  += MainUi.h \
     AbstractFactory/JProduct.h \
     AbstractFactory/ConcreteProduct.h \
     AbstractFactory/AbstractFactory.h \
-    AbstractFactory/ConcreteFactory.h
+    AbstractFactory/ConcreteFactory.h \
+    ObserverMode/AbstractObserver.h \
+    ObserverMode/ConcreteObserver.h \
+    ObserverMode/AbstractSubject.h \
+    ObserverMode/ConcreteSubject.h
 
 FORMS    += MainUi.ui
