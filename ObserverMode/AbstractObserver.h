@@ -9,6 +9,9 @@ class AbstractObserver
 
 public:
     virtual void UpdatePrice(float price)=0;
+
+private:
+    int test =0;
 };
 
 #endif // ABSTRACTOBSERVER_H

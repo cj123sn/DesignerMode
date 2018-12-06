@@ -27,7 +27,10 @@ SOURCES += main.cpp\
     ObserverMode/AbstractObserver.cpp \
     ObserverMode/ConcreteObserver.cpp \
     ObserverMode/AbstractSubject.cpp \
-    ObserverMode/ConcreteSubject.cpp
+    ObserverMode/ConcreteSubject.cpp \
+    StrategyMode/SaleStrategy.cpp \
+    StrategyMode/ConcreteStrategy.cpp \
+    StrategyMode/ConcreteContenx.cpp
 
 HEADERS  += MainUi.h \
     AdapterMode/RussiaSocker.h \
@@ -41,6 +44,9 @@ HEADERS  += MainUi.h \
     ObserverMode/AbstractObserver.h \
     ObserverMode/ConcreteObserver.h \
     ObserverMode/AbstractSubject.h \
-    ObserverMode/ConcreteSubject.h
+    ObserverMode/ConcreteSubject.h \
+    StrategyMode/SaleStrategy.h \
+    StrategyMode/ConcreteStrategy.h \
+    StrategyMode/ConcreteContenx.h
 
 FORMS    += MainUi.ui

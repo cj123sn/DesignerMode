@@ -21,6 +21,8 @@ private:
 
 private:
     void ObserverMode();
+    void AbstractFactoryMode();
+    void StrategyMode();
 };
 
 #endif // MAINUI_H

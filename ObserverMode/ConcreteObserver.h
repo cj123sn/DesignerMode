@@ -3,7 +3,6 @@
 
 #include <QString>
 #include "AbstractObserver.h"
-
 class ConcreteObserver : public AbstractObserver
 {
 public:

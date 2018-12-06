@@ -6,6 +6,9 @@
 #include "ObserverMode/ConcreteSubject.h"
 #include "ObserverMode/ConcreteObserver.h"
 
+#include "StrategyMode/ConcreteContenx.h"
+
+
 MainUi::MainUi(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::MainUi)
@@ -17,10 +20,8 @@ MainUi::MainUi(QWidget *parent) :
     // 单例模式
 //    Singleton::Instance()->doSomething();
 
-    // 抽象工厂模式
-//    AbstractFactory* pBenz = AbstractFactory::createFactory(AbstractFactory::FactoryType::e_Benz);
-//    qDebug()<<"current car:"<<pBenz->createCar()->name()<<"---current bike:"<<pBenz->createBike()->name();
 
+    StrategyMode();
 
 }
 
@@ -52,4 +53,31 @@ void MainUi::ObserverMode()
     sub->Detach(ob1);
     sub->SetPrice(15);
     sub->Notify();
+}
+
+void MainUi::AbstractFactoryMode()
+{
+    // 抽象工厂模式
+    AbstractFactory* pBenz = AbstractFactory::createFactory(AbstractFactory::FactoryType::e_Benz);
+    qDebug()<<"current car:"<<pBenz->createCar()->name()<<"---current bike:"<<pBenz->createBike()->name();
+}
+
+void MainUi::StrategyMode()
+{
+
+    // 策略模式
+
+/*
+ * 使用场景,目标只有1个获得当前优惠价格,至于怎么优惠,调用者并不关心
+ * 使用各种优惠策略,注册到场景中
+ * 普通用户
+ * 老用户
+ * vip用户
+*/
+
+    //SaleStrategy * strategy = new OldCustomerStrategy;
+    OldCustomerStrategy strategy;
+    ConcreteContenx content;
+    content.SetStrategy(&strategy);
+    qDebug()<<"current menoy = "<<content.getPrice(100.0);
 }
