@@ -3,6 +3,8 @@
 
 #include <QWidget>
 
+class QPushButton;
+
 namespace Ui {
 class MainUi;
 }
@@ -17,12 +19,17 @@ public:
 
 private:
     Ui::MainUi *ui;
+    QPushButton* blackBtn1;
+    QPushButton* blackBtn2;
+    QPushButton* whiteBtn1;
+    QPushButton* whiteBtn2;
 
 
 private:
     void ObserverMode();
     void AbstractFactoryMode();
     void StrategyMode();
+    void FlyweightMode();
 };
 
 #endif // MAINUI_H

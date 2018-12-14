@@ -30,7 +30,9 @@ SOURCES += main.cpp\
     ObserverMode/ConcreteSubject.cpp \
     StrategyMode/SaleStrategy.cpp \
     StrategyMode/ConcreteStrategy.cpp \
-    StrategyMode/ConcreteContenx.cpp
+    StrategyMode/ConcreteContenx.cpp \
+    FlyweightMode/ConcreteBtn.cpp \
+    FlyweightMode/BtnFactory.cpp
 
 HEADERS  += MainUi.h \
     AdapterMode/RussiaSocker.h \
@@ -47,6 +49,8 @@ HEADERS  += MainUi.h \
     ObserverMode/ConcreteSubject.h \
     StrategyMode/SaleStrategy.h \
     StrategyMode/ConcreteStrategy.h \
-    StrategyMode/ConcreteContenx.h
+    StrategyMode/ConcreteContenx.h \
+    FlyweightMode/ConcreteBtn.h \
+    FlyweightMode/BtnFactory.h
 
 FORMS    += MainUi.ui

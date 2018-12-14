@@ -7,7 +7,7 @@
 #include "ObserverMode/ConcreteObserver.h"
 
 #include "StrategyMode/ConcreteContenx.h"
-
+#include "FlyweightMode/BtnFactory.h"
 
 MainUi::MainUi(QWidget *parent) :
     QWidget(parent),
@@ -21,8 +21,8 @@ MainUi::MainUi(QWidget *parent) :
 //    Singleton::Instance()->doSomething();
 
 
-    StrategyMode();
-
+    //StrategyMode();
+    FlyweightMode();
 }
 
 MainUi::~MainUi()
@@ -80,4 +80,20 @@ void MainUi::StrategyMode()
     ConcreteContenx content;
     content.SetStrategy(&strategy);
     qDebug()<<"current menoy = "<<content.getPrice(100.0);
+}
+
+void MainUi::FlyweightMode()
+{
+
+    // 享元模式
+    blackBtn1 = BtnFactory::getBtn("black",this);
+    blackBtn1->move(100,0);
+    blackBtn2 = BtnFactory::getBtn("black",this);
+    blackBtn2->move(0,0);
+
+    whiteBtn1 = BtnFactory::getBtn("white",this);
+    whiteBtn1->move(100,20);
+    whiteBtn2 = BtnFactory::getBtn("white",this);
+    whiteBtn2->move(20,20);
+
 }
