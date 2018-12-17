@@ -32,7 +32,9 @@ SOURCES += main.cpp\
     StrategyMode/ConcreteStrategy.cpp \
     StrategyMode/ConcreteContenx.cpp \
     FlyweightMode/ConcreteBtn.cpp \
-    FlyweightMode/BtnFactory.cpp
+    FlyweightMode/BtnFactory.cpp \
+    Command/Command.cpp \
+    Command/IReciever.cpp
 
 HEADERS  += MainUi.h \
     AdapterMode/RussiaSocker.h \
@@ -51,6 +53,8 @@ HEADERS  += MainUi.h \
     StrategyMode/ConcreteStrategy.h \
     StrategyMode/ConcreteContenx.h \
     FlyweightMode/ConcreteBtn.h \
-    FlyweightMode/BtnFactory.h
+    FlyweightMode/BtnFactory.h \
+    Command/Command.h \
+    Command/IReciever.h
 
 FORMS    += MainUi.ui

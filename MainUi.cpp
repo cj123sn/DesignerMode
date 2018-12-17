@@ -9,11 +9,20 @@
 #include "StrategyMode/ConcreteContenx.h"
 #include "FlyweightMode/BtnFactory.h"
 
+
+
+
 MainUi::MainUi(QWidget *parent) :
     QWidget(parent),
+    m_caculator(20.0),
+    m_aliPay(&m_caculator),
+    m_txPay(&m_caculator),
     ui(new Ui::MainUi)
 {
     ui->setupUi(this);
+
+
+
     // 适配模式
 //    RussiaSocker* pRussiaSocker = new PowerAdapter;     // 给俄国插座找个适配器
 //    pRussiaSocker->charge();
@@ -22,7 +31,7 @@ MainUi::MainUi(QWidget *parent) :
 
 
     //StrategyMode();
-    FlyweightMode();
+    //FlyweightMode();
 }
 
 MainUi::~MainUi()
@@ -96,4 +105,20 @@ void MainUi::FlyweightMode()
     whiteBtn2 = BtnFactory::getBtn("white",this);
     whiteBtn2->move(20,20);
 
+}
+
+void MainUi::on_radioButton_clicked()
+{
+    pCommand = &m_aliPay;
+}
+
+void MainUi::on_radioButton_2_clicked()
+{
+    pCommand = &m_txPay;
+}
+
+void MainUi::on_pushButton_clicked()
+{
+    float price = ui->lineEdit->text().toFloat();
+    pCommand->pay();
 }
